@@ -50,6 +50,8 @@ const StudentSchema = new mongoose.Schema(
       default: "undisclosed",
     },
     avatarUrl: String,
+    faculty: String,
+    className: String,
     cohortYear: Number,
     enrollmentYear: Number,
     status: {

@@ -40,7 +40,7 @@ Token được trả về khi đăng nhập hoặc đăng ký thành công.
 
 ### 🔐 Account Management (`/api/accounts`)
 
-#### 1. Đăng ký tài khoản
+#### 1. Đăng ký tài khoản (CHỈ ĐĂNG KÝ TÀI KHOẢN ADMIN - KHÔNG DÙNG ĐỂ ĐĂNG KÝ TÀI KHOẢN SINH VIÊN)
 
 **POST** `/api/accounts/register`
 
@@ -110,6 +110,7 @@ Token được trả về khi đăng nhập hoặc đăng ký thành công.
 
 ```
 Authorization: Bearer <token>
+**lưu ý: khi đăng xuất xong phải xoá ngay file Authorization
 ```
 
 **Response:**

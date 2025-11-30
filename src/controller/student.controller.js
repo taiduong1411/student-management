@@ -339,11 +339,13 @@ const getTimetable = async (req, res) => {
 const getMyProfile = async (req, res) => {
   try {
     const account = req.user;
+    console.log(account._id.toString());
 
-    const student = await Student.findOne({ accountId: account._id }).populate(
-      "accountId",
-      "email displayName role status"
-    );
+    const student = await Student.findOne({
+      accountId: account._id.toString(),
+    });
+    // .populate("accountId", "email displayName role status");
+    console.log(student);
 
     if (!student) {
       return res.status(404).json({ message: "Student profile not found" });
